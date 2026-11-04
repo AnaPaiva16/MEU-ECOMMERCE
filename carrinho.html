@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho - L'Élixir Doré</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html"><span class="brand-name">L'Élixir Doré</span></a></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active" data-translate="menu-parfums">Início</a></li>
+                    <li><a href="#vitrine" data-translate="menu-collections">Coleção Especial</a></li>
+                    <li><a href="#familias" data-translate="menu-maison">Famílias Olfativas</a></li>
+                    <li><a href="cadastro.html" data-translate="menu-member">Cadastrar-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <h1 class="page-title">Sua Sacola de Compras</h1>
+        
+        <div class="cart-layout-grid">
+            <!-- Tabela Semântica do Carrinho -->
+            <section class="cart-items-section">
+                <table class="cart-table">
+                    <caption>Listagem de itens selecionados prontos para conferência e faturamento</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço Unitário</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Produto 1 -->
+                        <tr class="cart-item-row" data-preco-puro="310.00">
+                            <td class="cart-product-cell">
+                                <img src="img/perfume1.jpg" alt="Frasco Nuit Velours" class="cart-thumb">
+                                <div>
+                                    <p class="cart-prod-title">Nuit Velours Oud</p>
+                                    <span class="cart-prod-cat">Oriental Amadeirado</span>
+                                </div>
+                            </td>
+                            <td>€ 310,00</td>
+                            <td><input type="number" min="1" value="1" class="cart-qty-input" aria-label="Quantidade de Nuit Velours Oud"></td>
+                            <td class="item-subtotal">€ 310,00</td>
+                            <td><button class="btn-remove-item" type="button" aria-label="Remover Nuit Velours Oud do carrinho">🗑️</button></td>
+                        </tr>
+                        <!-- Produto 2 -->
+                        <tr class="cart-item-row" data-preco-puro="450.00">
+                            <td class="cart-product-cell">
+                                <img src="img/perfume2.jpg" alt="Frasco Éclat de Rose" class="cart-thumb">
+                                <div>
+                                    <p class="cart-prod-title">Éclat de Rose Impériale</p>
+                                    <span class="cart-prod-cat">Florais Raros</span>
+                                </div>
+                            </td>
+                            <td>€ 450,00</td>
+                            <td><input type="number" min="1" value="1" class="cart-qty-input" aria-label="Quantidade de Éclat de Rose Impériale"></td>
+                            <td class="item-subtotal">€ 450,00</td>
+                            <td><button class="btn-remove-item" type="button" aria-label="Remover Éclat de Rose Impériale do carrinho">🗑️</button></td>
+                        </tr>
+                        <!-- Produto 3 -->
+                        <tr class="cart-item-row" data-preco-puro="285.00">
+                            <td class="cart-product-cell">
+                                <img src="img/perfume3.jpg" alt="Frasco Santal Absolu" class="cart-thumb">
+                                <div>
+                                    <p class="cart-prod-title">Santal Absolu</p>
+                                    <span class="cart-prod-cat">Madeiras Preciosas</span>
+                                </div>
+                            </td>
+                            <td>€ 285,00</td>
+                            <td><input type="number" min="1" value="1" class="cart-qty-input" aria-label="Quantidade de Santal Absolu"></td>
+                            <td class="item-subtotal">€ 285,00</td>
+                            <td><button class="btn-remove-item" type="button" aria-label="Remover Santal Absolu do carrinho">🗑️</button></td>
+                        </tr>
+                    </tbody>
+                    <!-- tfoot com o aviso de frete grátis -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="cart-shipping-notice">
+                                ✨ Benefício Ativo: Você atingiu o valor de elegibilidade para <strong>Frete Expresso Internacional Grátis</strong>.
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <!-- Card Lateral de Resumo -->
+            <aside class="order-summary">
+                <h2>Resumo do Pedido</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span class="resumo-subtotal">€ 1.045,00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Frete</span>
+                    <span class="resumo-frete free-shipping">Grátis</span>
+                </div>
+                <div class="coupon-wrapper">
+                    <label for="coupon-code" class="sr-only">Cupom de Desconto</label>
+                    <input type="text" id="coupon-code" placeholder="Código do Cupom">
+                    <button type="button">Aplicar</button>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Valor Total</span>
+                    <span class="resumo-total">€ 1.045,00</span>
+                </div>
+                <a href="cadastro.html" class="btn-checkout">Finalizar Comra</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 L'Élixir Doré. Todos os direitos reservados. Projeto Acadêmico - Parte 2.</p>
+    </footer>
+    
+        <!-- SCRIPT DE INTERAÇÃO DO CARRINHO -->
+    <script>
+        // Executa quando todo o HTML terminar de carregar na tela
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // Força a execução do cálculo inicial ao abrir a página
+            atualizarCarrinho();
+
+            // 1. Monitoramento global de cliques para capturar as lixeiras
+            document.addEventListener("click", function(event) {
+                const botaoLixeira = event.target.closest(".btn-remove-item");
+                
+                if (botaoLixeira) {
+                    event.preventDefault();
+                    const linha = botaoLixeira.closest(".cart-item-row");
+                    if (linha) {
+                        linha.remove(); // Tira o produto da tabela
+                        atualizarCarrinho(); // Recalcula os totais e verifica o frete
+                    }
+                }
+            });
+
+            // 2. Monitoramento global de entradas para capturar mudanças de quantidade
+            document.addEventListener("input", function(event) {
+                if (event.target.classList.contains("cart-qty-input")) {
+                    // Garante que o usuário não digite valores menores que 1 ou apague o campo
+                    if (parseInt(event.target.value) < 1 || !event.target.value) {
+                        event.target.value = 1;
+                    }
+                    atualizarCarrinho(); // Recalcula valores individuais e totais
+                }
+            });
+        });
+
+        // 3. Função Principal de Cálculo e Validação
+        function atualizarCarrinho() {
+            let subtotalGeral = 0;
+            const linhasProdutos = document.querySelectorAll(".cart-item-row");
+
+            linhasProdutos.forEach(linha => {
+                // Lê o preço puro direto do atributo customizado 'data-preco-puro'
+                const precoUnitario = parseFloat(linha.getAttribute("data-preco-puro")) || 0;
+                
+                // Lê a quantidade atual do input da linha
+                const inputQuantidade = linha.querySelector(".cart-qty-input");
+                const quantidade = inputQuantidade ? (parseInt(inputQuantidade.value) || 0) : 1;
+
+                // Faz a multiplicação matemática para achar o subtotal do item
+                const subtotalItem = precoUnitario * quantidade;
+                subtotalGeral += subtotalItem;
+
+                // Escreve o subtotal individual atualizado na tela
+                const elementoSubtotalItem = linha.querySelector(".item-subtotal");
+                if (elementoSubtotalItem) {
+                    elementoSubtotalItem.textContent = formatarMoeda(subtotalItem);
+                }
+            });
+
+            // Regra do Frete Grátis: Valor mínimo necessário é € 500,00
+            const VALOR_MINIMO_BENEFICIO = 500; 
+            let valorFrete = 0;
+
+            const bannerBeneficio = document.querySelector(".cart-shipping-notice");
+            const resumoFrete = document.querySelector(".resumo-frete");
+
+            if (bannerBeneficio) {
+                if (subtotalGeral < VALOR_MINIMO_BENEFICIO) {
+                    // Oculta o banner amarelo se ficar abaixo de € 500 e adiciona o custo de frete
+                    bannerBeneficio.style.display = "none"; 
+                    valorFrete = 15.00; 
+                    if (resumoFrete) {
+                        resumoFrete.textContent = formatarMoeda(valorFrete);
+                        resumoFrete.classList.remove("free-shipping");
+                    }
+                } else {
+                    // Exibe o banner e mantém o frete como gratuito se atingir a meta
+                    bannerBeneficio.style.display = "table-cell"; 
+                    if (resumoFrete) {
+                        resumoFrete.textContent = "Grátis";
+                        resumoFrete.classList.add("free-shipping");
+                    }
+                }
+            }
+
+            // Soma o total final combinando os produtos e o frete atual
+            const totalGeral = subtotalGeral + valorFrete;
+
+            // Atualiza os painéis numéricos do resumo lateral direito
+            const resumoSubtotal = document.querySelector(".resumo-subtotal");
+            const resumoTotal = document.querySelector(".resumo-total");
+
+            if (resumoSubtotal) resumoSubtotal.textContent = formatarMoeda(subtotalGeral);
+            if (resumoTotal) resumoTotal.textContent = formatarMoeda(totalGeral);
+        }
+
+        // Função utilitária para transformar números brutos em formato de moeda europeia
+        function formatarMoeda(valor) {
+            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
+        }
+    </script>
+</body>
+</html>

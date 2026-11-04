@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuir Absolu (Esgotado) - L'Élixir Doré</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para o estado de item sem estoque */
+        .btn-out-of-stock {
+            background-color: #777777 !important;
+            color: #ffffff !important;
+            cursor: not-allowed;
+            pointer-events: none;
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .stock-status-alert {
+            color: #d9534f;
+            font-weight: bold;
+            margin: 15px 0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Unificado -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="brand-name">L'Élixir Doré</span>
+                    <span class="brand-sub">HAUTE PARFUMERIE</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active" data-translate="menu-parfums">Início</a></li>
+                    <li><a href="#vitrine" data-translate="menu-collections">Coleção Especial</a></li>
+                    <li><a href="#familias" data-translate="menu-maison">Famílias Olfativas</a></li>
+                    <li><a href="cadastro.html" data-translate="menu-member">Cadastrar-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-detail-container">
+        <div class="product-view-columns">
+            <!-- Galeria de Imagens -->
+            <div class="product-gallery-column" style="opacity: 0.7;">
+                <div class="main-image-wrapper">
+                    <img src="img/perfume6.jpg" alt="Frasco do perfume Cuir Absolu atualmente indisponível" class="main-product-img">
+                </div>
+            </div>
+
+            <!-- Informações de Compra -->
+            <div class="product-info-column">
+                <nav class="breadcrumb">
+                    <a href="index.html">Início</a> &gt; <a href="#">Couros Intensos</a> &gt; <span>Cuir Absolu</span>
+                </nav>
+                
+                <h1>Cuir Absolu</h1>
+                <p class="product-subtitle">Eau de Parfum — Haute Parfumerie</p>
+                
+                <div class="rating-stars">
+                    <span aria-hidden="true">★★★★★</span> 
+                    <span class="rating-count">(42 avaliações de clientes VIP)</span>
+                </div>
+                
+                <div class="price-container">
+                    <span class="price-current">€ 340,00</span>
+                </div>
+
+                <!-- Alerta de Indisponibilidade -->
+                <p class="stock-status-alert">⚠️ Temporariamente sem estoque no mercado internacional</p>
+
+                <div class="options-selector">
+                    <label for="size-select">Volume:</label>
+                    <select id="size-select" name="voltagem-tamanho" disabled>
+                        <option value="100ml">100 ml (Aguardando Reposição)</option>
+                    </select>
+                </div>
+
+                <!-- Botão Desativado Sem Link de Carrinho -->
+                <span class="btn-out-of-stock">Produto Esgotado</span>
+            </div>
+        </div>
+
+        <!-- Tabela Semântica de Especificações Técnicas -->
+        <div class="specs-table-container">
+            <h2 class="section-title">Especificações Técnicas</h2>
+            <table class="specs-table">
+                <caption>Ficha técnica estruturada detalhando as propriedades físicas e olfativas do item</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">Marca</th>
+                        <td>L'Élixir Doré</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Família Olfativa</th>
+                        <td>Couro Intenso Especiado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Concentração</th>
+                        <td>Eau de Parfum (EDP)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Notas de Topo</th>
+                        <td>Couro Toscano, Tabaco Havana e Notas Defumadas</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Volume Líquido</th>
+                        <td>100 ml / 3.4 fl. oz.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 L'Élixir Doré. Todos os direitos reservados. Projeto Acadêmico - Parte 2.</p>
+    </footer>
+
+</body>
+</html>

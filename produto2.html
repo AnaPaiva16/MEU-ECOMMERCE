@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éclat de Rose Impériale - L'Élixir Doré</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Unificado -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="brand-name">L'Élixir Doré</span>
+                    <span class="brand-sub">HAUTE PARFUMERIE</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active" data-translate="menu-parfums">Início</a></li>
+                    <li><a href="#vitrine" data-translate="menu-collections">Coleção Especial</a></li>
+                    <li><a href="#familias" data-translate="menu-maison">Famílias Olfativas</a></li>
+                    <li><a href="cadastro.html" data-translate="menu-member">Cadastrar-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-detail-container">
+        <!-- Layout de duas colunas (Grid/Flexbox) -->
+        <div class="product-view-columns">
+            
+            <!-- Coluna da Esquerda: Galeria de Imagens -->
+            <div class="product-gallery-column">
+                <div class="main-image-wrapper">
+                    <img src="img/perfume2.jpg" alt="Frasco do perfume Éclat de Rose Impériale em alta resolução" class="main-product-img">
+                </div>
+                <div class="thumbnails-grid">
+                    <img src="img/perfume2.jpg" alt="Vista frontal do frasco" class="thumb-img">
+                    <img src="img/perfume2-side.jpg" alt="Vista lateral do frasco lapidado" class="thumb-img">
+                    <img src="img/perfume2-box.jpg" alt="Embalagem de luxo com detalhes em ouro rosa" class="thumb-img">
+                    <img src="img/perfume2-detail.jpg" alt="Detalhe do brasão imperial impresso no vidro" class="thumb-img">
+                </div>
+            </div>
+
+            <!-- Coluna da Direita: Informações de Compra -->
+            <div class="product-info-column">
+                <!-- Trilha de Navegação obrigatória -->
+                <nav class="breadcrumb">
+                    <a href="index.html">Início</a> &gt; <a href="#">Florais Raros</a> &gt; <span>Éclat de Rose Impériale</span>
+                </nav>
+                
+                <h1>Éclat de Rose Impériale</h1>
+                <p class="product-subtitle">Eau de Parfum — Haute Parfumerie</p>
+                
+                <!-- Avaliação em estrelas -->
+                <div class="rating-stars">
+                    <span aria-hidden="true">★★★★★</span> 
+                    <span class="rating-count">(64 avaliações de clientes VIP)</span>
+                </div>
+                
+                <!-- Preços antigo e atual -->
+                <div class="price-container">
+                    <span class="price-old">€ 495,00</span>
+                    <span class="price-current">€ 450,00</span>
+                </div>
+
+                <!-- Seletor de opções com select -->
+                <div class="options-selector">
+                    <label for="size-select">Volume Disponível:</label>
+                    <select id="size-select" name="voltagem-tamanho">
+                        <option value="100ml">100 ml (Disponibilidade Imediata)</option>
+                        <option value="50ml">50 ml (Estoque Limitado)</option>
+                    </select>
+                </div>
+
+                <!-- Botão de linkagem real para o carrinho -->
+                <a href="carrinho.html" class="btn-add-to-cart">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+
+        <!-- Tabela Semântica de Especificações Técnicas -->
+        <div class="specs-table-container">
+            <h2 class="section-title">Especificações Técnicas</h2>
+            <table class="specs-table">
+                <caption>Ficha técnica estruturada detalhando as propriedades físicas e olfativas do item</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">Marca</th>
+                        <td>L'Élixir Doré</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Família Olfativa</th>
+                        <td>Floral Absoluto Real</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Concentração</th>
+                        <td>Eau de Parfum (EDP) com colheita exclusiva de maio</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Notas de Topo</th>
+                        <td>Rosa de Grasse Centifolia, Lichia Doce e Pimenta Rosa</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Volume Líquido</th>
+                        <td>100 ml / 3.4 fl. oz.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Rodapé Unificado -->
+    <footer class="main-footer">
+        <p>© 2026 L'Élixir Doré. Todos os direitos reservados. Projeto Acadêmico - Parte 2.</p>
+    </footer>
+
+</body>
+</html>

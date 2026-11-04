@@ -1,0 +1,1072 @@
+/* ==========================================================================
+   00. CONFIGURAÇÕES GERAIS E PALETA DE LUXO
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* Padrões Gerais das Novas Páginas */
+.page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 40px auto;
+}
+
+/* ==========================================================================
+   01. IDENTIDADE VISUAL NO CABEÇALHO (<header>)
+   ========================================================================== */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.brand-sub {
+    font-size: 9px;
+    letter-spacing: 6px;
+    color: #999;
+    margin-top: -2px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #c5a059;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.language-selector span {
+    cursor: pointer;
+}
+
+.language-selector .active {
+    font-weight: bold;
+}
+
+.cart-icon {
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+   02. BANNER PRINCIPAL COM <picture> RESPONSIVO
+   ========================================================================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    color: #e0e0e0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.btn-discover {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.4s ease;
+}
+
+.btn-discover:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ==========================================================================
+   03. CATEGORIAS COM IMAGENS CIRCULARES (border-radius: 50%)
+   ========================================================================== */
+.categories-section,
+.showcase-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #c5a059;
+    margin: 15px auto 0 auto;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.category-item {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-img-wrapper {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.category-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.category-item h3 {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.category-item:hover .category-img-wrapper {
+    border-color: #c5a059;
+    transform: scale(1.08);
+}
+
+
+/* ==========================================================================
+   04. VITRINE DE PRODUTOS PADRONIZADA (PADRÃO DE TAMANHO ABSOLUTO)
+   ========================================================================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+    align-items: stretch;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.product-img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.product-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-card:hover .product-img-container img {
+    transform: scale(1.08);
+}
+
+.product-info {
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product-desc {
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.product-price {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-top: auto;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.btn-buy,
+.btn-notify {
+    width: 100%;
+    padding: 14px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #c5a059;
+}
+
+/* ==========================================================================
+   05. PRODUTO "ESGOTADO" (Filtros CSS e Posição Absoluta)
+   ========================================================================== */
+.sold-out .img-sold-out {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.badge-sold-out {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-size: 10px;
+    padding: 6px 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.product-price.unavailable {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.btn-notify {
+    background-color: #555;
+}
+
+.btn-notify:hover {
+    background-color: #333;
+}
+
+
+/* ==========================================================================
+   06. PÁGINA DE PRODUTO DETALHADO (`produto.html`)
+   ========================================================================== */
+.product-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.product-view-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.main-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+
+.main-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnails-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.thumb-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid #eaeaea;
+    transition: all 0.3s ease;
+}
+
+.thumb-img:hover {
+    border-color: #c5a059;
+    transform: translateY(-2px);
+}
+
+.breadcrumb {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #c5a059;
+}
+
+.product-info-column h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.product-subtitle {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.rating-stars {
+    color: #c5a059;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.rating-count {
+    color: #777;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price-container {
+    margin-bottom: 30px;
+}
+
+.price-old {
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+
+.price-current {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+}
+
+.options-selector {
+    margin-bottom: 30px;
+}
+
+.options-selector label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.options-selector select {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.btn-add-to-cart {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #c5a059;
+}
+
+/* Tabelas Semânticas Estilizadas (Produto e Carrinho) */
+.specs-table-container {
+    margin-top: 80px;
+}
+
+.specs-table,
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.specs-table caption,
+.cart-table caption {
+    text-align: left;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.specs-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.specs-table tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.specs-table th {
+    text-align: left;
+    padding: 15px;
+    font-weight: 500;
+    width: 30%;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.specs-table td {
+    padding: 15px;
+    color: #444;
+}
+
+
+/* ==========================================================================
+   07. PÁGINA DE CARRINHO DE COMPRAS (carrinho.html)
+   ========================================================================= */
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.cart-layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.cart-table th {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 12px;
+    font-weight: 400;
+}
+
+.cart-table td {
+    padding: 20px 12px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.cart-table td:first-child {
+    text-align: left;
+}
+
+.cart-product-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.cart-prod-title {
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.cart-prod-cat {
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.cart-qty-input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.btn-remove-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
+.btn-remove-item:hover {
+    opacity: 0.6;
+}
+
+.cart-shipping-notice {
+    text-align: left !important;
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    padding: 15px !important;
+    font-size: 12px;
+}
+
+.order-summary {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    padding: 30px;
+}
+
+.order-summary h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.free-shipping {
+    color: #c5a059;
+    font-weight: 500;
+}
+
+.coupon-wrapper {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.coupon-wrapper input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+
+.coupon-wrapper button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 11px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.total-row {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.btn-checkout {
+    display: block;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s;
+}
+
+.btn-checkout:hover {
+    background-color: #c5a059;
+}
+
+
+/* ==========================================================================
+   08. PÁGINA DE CADASTRO E CHECKOUT SECURE (cadastro.html)
+   ========================================================================= */
+.checkout-form-container {
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.luxury-form fieldset {
+    border: 1px solid #eaeaea;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.luxury-form legend {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 10px;
+    color: #000;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-layout-triple {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 20px;
+}
+
+.luxury-form label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.luxury-form input[type="text"],
+.luxury-form input[type="email"],
+.luxury-form input[type="tel"],
+.luxury-form input[type="password"],
+.luxury-form input[type="date"],
+.luxury-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* --- FEEDBACK DE VALIDAÇÃO NATIVA --- */
+.luxury-form input:focus,
+.luxury-form select:focus {
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.luxury-form input:focus:valid,
+.luxury-form select:focus:valid {
+    border-color: #449d44;
+    box-shadow: 0 0 5px rgba(68, 157, 68, 0.2);
+}
+
+.luxury-form input:focus:invalid,
+.luxury-form select:focus:invalid {
+    border-color: #c9302c;
+    box-shadow: 0 0 5px rgba(201, 48, 44, 0.2);
+}
+
+.file-group input {
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+/* Seletores Customizados Rádio (:checked) */
+.payment-instruction {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.payment-methods-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-radio-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.payment-radio-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-custom-box {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.payment-radio-card input[type="radio"]:checked+.radio-custom-box {
+    border-color: #c5a059;
+    background-color: #c5a059;
+}
+
+.payment-radio-card input[type="radio"]:checked+.radio-custom-box::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.payment-radio-card:hover {
+    background-color: #fbfbfb;
+}
+
+.payment-label-text {
+    font-size: 12px !important;
+    text-transform: none !important;
+    letter-spacing: 0px !important;
+}
+
+.form-footer-actions {
+    margin-top: 20px;
+}
+
+.checkbox-terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.checkbox-terms input {
+    margin-top: 3px;
+}
+
+.checkbox-terms span {
+    font-size: 11px;
+    text-transform: none;
+    color: #555;
+}
+
+.btn-submit-checkout {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 18px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit-checkout:hover {
+    background-color: #c5a059;
+}
+
+/* ==========================================================================
+   09. ACESSIBILIDADE E GLOBAL RESPONSIVE RODAPÉ
+   ========================================================================= */
+.main-footer {
+    background-color: #111111;
+    color: #999999;
+    padding: 60px 20px 40px 20px;
+    margin-top: 80px;
+    border-top: 1px solid #222222;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #c5a059;
+}
+
+.footer-copyright p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777777;
+    margin-bottom: 8px;
+}
+
+.footer-subtext {
+    font-size: 9px !important;
+    letter-spacing: 4px !important;
+    color: #555555 !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Media Queries Unificadas */
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-view-columns,
+    .cart-layout-grid,
+    .form-row,
+    .form-layout-triple {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-social {
+        gap: 20px;
+    }
+
+    .footer-social a {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+/* ==========================================================================
+   10. REGRAS EXTRAS: ANTI-VAZAMENTO E SUPORTE PARA SELETOR DE IDIOMAS EM LINHA
+   ========================================================================== */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* CORREÇÃO DEFINITIVA: Trava as laterais do site */
+}
+
+.header-container {
+    flex-wrap: nowrap; /* Impede o cabeçalho de quebrar linha ou desalinhar */
+}
+
+/* Formatação dos novos botões clicáveis de idioma */
+.language-selector {
+    display: flex;
+    gap: 6px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    color: #bbb;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 2px 4px;
+    transition: color 0.2s;
+}
+
+.lang-btn:hover, .lang-btn.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.cart-icon-link {
+    text-decoration: none;
+    color: inherit;
+}
+

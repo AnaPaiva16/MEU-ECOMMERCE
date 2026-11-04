@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L’Élixir Doré | Haute Parfumerie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes do Google corrigidas para carregar a estética de luxo -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. IDENTIDADE VISUAL NO CABEÇALHO -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="brand-name">L’Élixir Doré</span>
+                    <span class="brand-sub">HAUTE PARFUMERIE</span>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active" data-translate="menu-parfums">Início</a></li>
+                    <li><a href="#vitrine" data-translate="menu-collections">Coleção Especial</a></li>
+                    <li><a href="#familias" data-translate="menu-maison">Famílias Olfativas</a></li>
+                    <li><a href="cadastro.html" data-translate="menu-member">Cadastrar-se</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- SELETOR DE IDIOMAS ADAPTADO PARA BOTÕES CLICÁVEIS -->
+                <div class="language-selector">
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <a href="carrinho.html" class="cart-icon-link" style="text-decoration: none; color: inherit;">
+                    <div class="cart-icon">
+                        <span class="icon">🛒</span>
+                        <span class="cart-count">(3)</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. BANNER PRINCIPAL RESPONSIVO -->
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/fundoprincipal.jpg">
+                <source media="(max-width: 1023px)" srcset="images/fundoprincipal.jpg">
+                <img src="img/fundoprincipal.jpg" 
+                     alt="Campanha L’Élixir Doré: Frascos de cristal lapidados refletindo feixes de luz dourada em ambiente minimalista" 
+                     width="1920" height="600" class="hero-img">
+            </picture>
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 data-translate="hero-title">Seus Sonhos em Frascos</h1>
+                    <p data-translate="hero-subtitle">A arte da alta perfumaria francesa na sua pele.</p>
+                    <a href="#vitrine" class="btn-discover" data-translate="hero-btn">Descobrir</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NAVEGAÇÃO POR CATEGORIAS -->
+        <section id="familias" class="categories-secton">
+            <h2 class="section-title" data-translate="cat-title">Famílias Olfativas</h2>
+            <div class="categories-grid">
+                
+                <a href="#vitrine" class="category-item">
+                    <div class="category-img-wrapper">
+                        <img src="img/vanilla.jpg" alt="Categoria Notas de Âmbar e Baunilha Oriental" width="200" height="200">
+                    </div>
+                    <h3 data-translate="cat-1">Âmbar</h3>
+                </a>
+
+                <a href="#vitrine" class="category-item">
+                    <div class="category-img-wrapper">
+                        <img src="img/amadeirado.jpg" alt="Categoria Notas de Amadeirados Nobres e Oud" width="200" height="200">
+                    </div>
+                    <h3 data-translate="cat-2">Amadeirados</h3>
+                </a>
+
+                <a href="#vitrine" class="category-item">
+                    <div class="category-img-wrapper">
+                        <img src="img/floral.jpg" alt="Categoria Notas Florais de Rosas Raras" width="200" height="200">
+                    </div>
+                    <h3 data-translate="cat-3">Florais</h3>
+                </a>
+
+                <a href="#vitrine" class="category-item">
+                    <div class="category-img-wrapper">
+                        <img src="img/citrico.jpeg" alt="Categoria Notas Cítricas e Refrescantes" width="200" height="200">
+                    </div>
+                    <h3 data-translate="cat-4">Cítrico</h3>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- 4 e 5. VITRINE DE PRODUTOS PADRONIZADA (3 POR LINHA) -->
+        <section id="vitrine" class="showcase-section">
+            <h2 class="section-title" data-translate="showcase-title">Coleção Especial</h2>
+            <div class="products-grid">
+
+                <!-- Produto 1 -->
+                <article class="product-card">
+                    <a href="produto1.html" style="text-decoration: none; color: inherit;">
+                        <figure class="product-img-container">
+                            <img src="img/blue.png" 
+                                 alt="Frasco de perfume retangular em vidro negro com detalhes em ouro contendo o perfume Nuit Velours" 
+                                 width="400" height="500" loading="lazy">
+                        </figure>
+                    </a>
+                    <figcaption class="product-info">
+                        <h3 class="product-name">Nuit Velours Oud</h3>
+                        <p class="product-desc">Eau de Parfum &mdash; 100ml</p>
+                        <span class="product-price">€ 310,00</span>
+                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 2 -->
+                <article class="product-card">
+                    <a href="produto2.html" style="text-decoration: none; color: inherit;">
+                    <figure class="product-img-container">
+                        <img src="img/rosa.png" 
+                             alt="Frasco de perfume esférico crystalline com uma tampa em formato de botão de rosa dourado" 
+                             width="400" height="500" loading="lazy">
+                    </figure>
+                    </a>
+                    <figcaption class="product-info">
+                        <h3 class="product-name">Éclat de Rose Impériale</h3>
+                        <p class="product-desc">Extraits de Parfum &mdash; 50ml</p>
+                        <span class="product-price">€ 450,00</span>
+                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 3 -->
+                <article class="product-card">
+                    <a href="produto3.html" style="text-decoration: none; color: inherit;">
+                    <figure class="product-img-container">
+                        <img src="img/brown.png" 
+                             alt="Frasco de perfume minimalista transparente com líquido âmbar e tampa de madeira escura" 
+                             width="400" height="500" loading="lazy">
+                    </figure>
+                    </a>
+                    <figcaption class="product-info">
+                        <h3 class="product-name">Santal Absolu</h3>
+                        <p class="product-desc">Eau de Parfum &mdash; 100ml</p>
+                        <span class="product-price">€ 285,00</span>
+                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 4 -->
+                <article class="product-card">
+                    <a href="produto4.html" style="text-decoration: none; color: inherit;">
+                    <figure class="product-img-container">
+                        <img src="img/prata.png" 
+                             alt="Frasco de perfume cilíndrico prateado refletivo em um fundo minimalista branco" 
+                             width="400" height="500" loading="lazy">
+                    </figure>
+                    </a>
+                    <figcaption class="product-info">
+                        <h3 class="product-name">Bergamote Argentée</h3>
+                        <p class="product-desc">Cologne de Luxe &mdash; 120ml</p>
+                        <span class="product-price">€ 195,00</span>
+                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 5 -->
+                <article class="product-card">
+                    <a href="produto5.html" style="text-decoration: none; color: inherit;">
+                    <figure class="product-img-container">
+                        <img src="img/verde.jpg" 
+                             alt="Frasco de perfume com aroma da floresta em tom verde escuro" 
+                             width="400" height="500" loading="lazy">
+                    </figure>
+                    </a>
+                    <figcaption class="product-info">
+                        <h3 class="product-name">Cuir Sacré</h3>
+                        <p class="product-desc">Parfum Solide & Spray &mdash; 75ml</p>
+                        <span class="product-price">€ 390,00</span>
+                        <button class="btn-buy">Acheter / Comprar</button>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 6 (Obrigatório: Status Esgotado) -->
+                <article class="product-card sold-out">
+                    <a href="produto6.html" style="text-decoration: none; color: inherit;">
+                    <figure class="product-img-container">
+                        <img src="img/black.jpg" 
+                             alt="Frasco de perfume de edição limitada esculpido como uma joia de diamante lapidado" 
+                             width="400" height="500" loading="lazy" class="img-sold-out">
+                        <span class="badge-sold-out">ESGOTADO / SOLD OUT</span>
+                    </figure>
+                    </a>
+                    <figcaption class="product-info">
+                        <h3 class="product-name">Or Blanc Réserve 2024</h3>
+                        <p class="product-desc">Édition Limitée &mdash; 50ml</p>
+                        <span class="product-price unavailable">Épuisé / Indisponível</span>
+                        <button class="btn-notify">Avise-me / Notify Me</button>
+                    </figcaption>
+                </article>
+
+            </div>
+        </section>
+
+            <!-- 6. RODAPÉ INSTITUCIONAL DA LOJA -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <!-- Redes Sociais com estética minimalista -->
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Pinterest">Pinterest</a>
+                <a href="#" aria-label="LinkedIn">Twitter</a>
+            </div>
+
+            <!-- Direitos Autorais com o símbolo © (czinho) -->
+            <div class="footer-copyright">
+                <p>&copy; 2026 L’Élixir Doré. Todos os direitos reservados.</p>
+                <p class="footer-subtext">Haute Parfumerie Internationale &mdash; São Paulo &bull; Paris &bull; Itália</p>
+            </div>
+
+        </div>
+    </footer>

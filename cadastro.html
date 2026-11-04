@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Seguro - L'Élixir Doré</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html"><span class="brand-name">L'Élixir Doré</span></a></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active" data-translate="menu-parfums">Início</a></li>
+                    <li><a href="#vitrine" data-translate="menu-collections">Coleção Especial</a></li>
+                    <li><a href="#familias" data-translate="menu-maison">Famílias Olfativas</a></li>
+                    <li><a href="cadastro.html" data-translate="menu-member">Cadastrar-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="checkout-form-container">
+        <h1 class="page-title">Finalização do Pedido</h1>
+        
+        <form action="#" method="POST" class="luxury-form">
+            
+            <!-- Bloco 1: Dados Pessoais -->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                
+                <div class="form-group">
+                    <label for="fullname">Nome Completo *</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Ex: Jean Paul Silva">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="user-email">E-mail *</label>
+                        <input type="email" id="user-email" name="email" required placeholder="exemplo@luxo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-cpf">CPF *</label>
+                        <input type="text" id="user-cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="user-tel">Telefone / WhatsApp *</label>
+                        <input type="tel" id="user-tel" name="tel" required placeholder="(11) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-birth">Data de Nascimento *</label>
+                        <input type="date" id="user-birth" name="birthdate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-password">Criar Senha de Acesso *</label>
+                    <input type="password" id="user-password" name="password" required minlength="6" placeholder="Mínimo 6 caracteres">
+                </div>
+
+                <div class="form-group file-group">
+                    <label for="user-avatar">Foto de Perfil / Avatar (Opcional)</label>
+                    <input type="file" id="user-avatar" name="avatar" accept="image/*">
+                </div>
+            </fieldset>
+
+            <!-- Bloco 2: Endereço de Entrega -->
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+                
+                <div class="form-row">
+                    <div class="form-group cep-group">
+                        <label for="addr-cep">CEP *</label>
+                        <input type="text" id="addr-cep" name="cep" required placeholder="00000-000">
+                    </div>
+                    <div class="form-group">
+                        <label for="addr-street">Rua/Logradouro *</label>
+                        <input type="text" id="addr-street" name="street" required placeholder="Av. da Alta Costura">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="addr-num">Número *</label>
+                        <input type="text" id="addr-num" name="number" required placeholder="123">
+                    </div>
+                    <div class="form-group">
+                        <label for="addr-comp">Complemento</label>
+                        <input type="text" id="addr-comp" name="complement" placeholder="Apto, Bloco, etc.">
+                    </div>
+                </div>
+
+                <div class="form-layout-triple">
+                    <div class="form-group">
+                        <label for="addr-bairro">Bairro *</label>
+                        <input type="text" id="addr-bairro" name="bairro" required placeholder="Centro">
+                    </div>
+                    <div class="form-group">
+                        <label for="addr-city">Cidade *</label>
+                        <input type="text" id="addr-city" name="city" required placeholder="São Paulo">
+                    </div>
+                    <div class="form-group">
+                        <label for="addr-state">Estado *</label>
+                        <select id="addr-state" name="state" required>
+                            <option value="">Selecione</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Bloco 3: Forma de Pagamento com Elementos Visuais Incorporados -->
+            <fieldset>
+                <legend>Método de Pagamento</legend>
+                <p class="payment-instruction">Selecione a sua opção preferencial:</p>
+                
+                <div class="payment-methods-grid">
+                    <label class="payment-radio-card">
+                        <input type="radio" name="pagamento" value="pix" required>
+                        <span class="radio-custom-box"></span>
+                        <span class="payment-label-text">⚜️ PIX (Liberação Instantânea)</span>
+                    </label>
+
+                    <label class="payment-radio-card">
+                        <input type="radio" name="pagamento" value="cartao">
+                        <span class="radio-custom-box"></span>
+                        <span class="payment-label-text">💳 Cartão de Crédito (Até 12x Sem Juros)</span>
+                    </label>
+
+                    <label class="payment-radio-card">
+                        <input type="radio" name="pagamento" value="boleto">
+                        <span class="radio-custom-box"></span>
+                        <span class="payment-label-text">📄 Boleto Bancário</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Rodapé Operacional e Termos de Uso Exigidos -->
+            <div class="form-footer-actions">
+                <label class="checkbox-terms">
+                    <input type="checkbox" name="terms" required id="accept-terms">
+                    <span>Li e aceito os Termos de Uso e as Políticas de Privacidade da plataforma. *</span>
+                </label>
+                
+                <button type="submit" class="btn-submit-checkout">Concluir Cadastro e Pagar</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 L'Élixir Doré. Todos os direitos reservados. Projeto Acadêmico - Parte 2.</p>
+    </footer>
+
+</body>
+</html>
