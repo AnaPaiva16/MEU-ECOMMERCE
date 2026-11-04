@@ -52,8 +52,8 @@
         <!-- 2. BANNER PRINCIPAL RESPONSIVO -->
         <section class="hero">
             <picture>
-                <source media="(min-width: 1024px)" srcset="images/fundoprincipal.jpg">
-                <source media="(max-width: 1023px)" srcset="images/fundoprincipal.jpg">
+                <source media="(min-width: 1024px)" srcset="img/fundoprincipal.jpg">
+                <source media="(max-width: 1023px)" srcset="img/fundoprincipal.jpg">
                 <img src="img/fundoprincipal.jpg" 
                      alt="Campanha L’Élixir Doré: Frascos de cristal lapidados refletindo feixes de luz dourada em ambiente minimalista" 
                      width="1920" height="600" class="hero-img">
@@ -119,9 +119,9 @@
                     </a>
                     <figcaption class="product-info">
                         <h3 class="product-name">Nuit Velours Oud</h3>
-                        <p class="product-desc">Eau de Parfum &mdash; 100ml</p>
+                        <p class="product-desc">Eau de Parfum</p>
                         <span class="product-price">€ 310,00</span>
-                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                        <a href="produto1.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
                     </figcaption>
                 </article>
 
@@ -136,9 +136,9 @@
                     </a>
                     <figcaption class="product-info">
                         <h3 class="product-name">Éclat de Rose Impériale</h3>
-                        <p class="product-desc">Extraits de Parfum &mdash; 50ml</p>
+                        <p class="product-desc">Extratos de Perfume</p>
                         <span class="product-price">€ 450,00</span>
-                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                        <a href="produto2.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
                     </figcaption>
                 </article>
 
@@ -153,9 +153,9 @@
                     </a>
                     <figcaption class="product-info">
                         <h3 class="product-name">Santal Absolu</h3>
-                        <p class="product-desc">Eau de Parfum &mdash; 100ml</p>
+                        <p class="product-desc">Eau de Parfum</p>
                         <span class="product-price">€ 285,00</span>
-                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                        <a href="produto3.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
                     </figcaption>
                 </article>
 
@@ -170,9 +170,9 @@
                     </a>
                     <figcaption class="product-info">
                         <h3 class="product-name">Bergamote Argentée</h3>
-                        <p class="product-desc">Cologne de Luxe &mdash; 120ml</p>
+                        <p class="product-desc">Colônia de Luxo</p>
                         <span class="product-price">€ 195,00</span>
-                        <a href="carrinho.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Acheter / Comprar</a>
+                        <a href="produto4.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
                     </figcaption>
                 </article>
 
@@ -187,9 +187,9 @@
                     </a>
                     <figcaption class="product-info">
                         <h3 class="product-name">Cuir Sacré</h3>
-                        <p class="product-desc">Parfum Solide & Spray &mdash; 75ml</p>
+                        <p class="product-desc">Perfume Sólido e em Spray</p>
                         <span class="product-price">€ 390,00</span>
-                        <button class="btn-buy">Acheter / Comprar</button>
+                        <a href="produto5.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
                     </figcaption>
                 </article>
 
@@ -200,14 +200,14 @@
                         <img src="img/black.jpg" 
                              alt="Frasco de perfume de edição limitada esculpido como uma joia de diamante lapidado" 
                              width="400" height="500" loading="lazy" class="img-sold-out">
-                        <span class="badge-sold-out">ESGOTADO / SOLD OUT</span>
+                        <span class="badge-sold-out">ESGOTADO!</span>
                     </figure>
                     </a>
                     <figcaption class="product-info">
                         <h3 class="product-name">Or Blanc Réserve 2024</h3>
-                        <p class="product-desc">Édition Limitée &mdash; 50ml</p>
-                        <span class="product-price unavailable">Épuisé / Indisponível</span>
-                        <button class="btn-notify">Avise-me / Notify Me</button>
+                        <p class="product-desc">Edição Limitada</p>
+                        <span class="product-price unavailable">Indisponível</span>
+                        <button type="button" class="btn-notify">Avise-me</button>
                     </figcaption>
                 </article>
 
@@ -232,4 +232,37 @@
             </div>
 
         </div>
+
     </footer>
+
+            <!-- SCRIPT PARA DISPARAR ALERTA NO BOTÃO AVISE-ME (BLINDADO) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Monitora os cliques de forma global na página
+            document.addEventListener("click", function(event) {
+                // Procura se o elemento clicado tem a classe btn-notify ou se o link vai para o produto6
+                const botaoAviseMe = event.target.closest(".btn-notify") || event.target.closest("[data-translate='btn-indisponivel']");
+                
+                if (botaoAviseMe) {
+                    event.preventDefault(); // Impede a página de pular ou recarregar
+
+                    // Tenta achar o nome do perfume subindo até o card do produto
+                    const cardProduto = botaoAviseMe.closest(".product-card");
+                    let nomeProduto = "Or Blanc Réserve 2024"; // Nome padrão de segurança
+                    
+                    if (cardProduto) {
+                        const elementoNome = cardProduto.querySelector(".product-name");
+                        if (elementoNome) {
+                            nomeProduto = elementoNome.textContent.trim();
+                        }
+                    }
+
+                    // Dispara a caixinha de aviso na tela
+                    alert(`✨ Sucesso! Avisaremos você por e-mail assim que o perfume "${nomeProduto}" estiver de volta ao estoque.`);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
