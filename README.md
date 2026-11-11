@@ -3,15 +3,15 @@
 Projeto prático desenvolvido na Unidade Curricular de **Linguagem de Marcação (HTML5 & CSS3)**.
 
 ## 🌐 Links das Páginas Publicadas (GitHub Pages)
-- 🏠 [Vitrine Principal (index.html)](https://anapaiva16.github.io/Projeto-Palais-du-Parfum/)
-- 🔍 [Detalhes do Produto 1(produto1.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/produto1.html)
-- 🔍 [Detalhes do Produto 2(produto2.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/produto2.html)
-- 🔍 [Detalhes do Produto 3(produto3.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/produto3.html)
-- 🔍 [Detalhes do Produto 4(produto4.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/produto4.html)
-- 🔍 [Detalhes do Produto 5(produto5.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/produto5.html)
-- 🔍 [Detalhes do Produto 6(produto6.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/produto6.html)
-- 🛍️ [Carrinho de Compras (carrinho.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/carrinho.html)
-- 👤 [Cadastro e Checkout (cadastro.html)](https://anapaiva16.github.io/MEU-ECOMMERCE/cadastro.html)
+- 🏠 [Vitrine Principal](https://anapaiva16.github.io/Projeto-Palais-du-Parfum/)
+- 🔍 [Detalhes do Produto 1](https://anapaiva16.github.io/MEU-ECOMMERCE/produto1.html)
+- 🔍 [Detalhes do Produto 2](https://anapaiva16.github.io/MEU-ECOMMERCE/produto2.html)
+- 🔍 [Detalhes do Produto 3](https://anapaiva16.github.io/MEU-ECOMMERCE/produto3.html)
+- 🔍 [Detalhes do Produto 4](https://anapaiva16.github.io/MEU-ECOMMERCE/produto4.html)
+- 🔍 [Detalhes do Produto 5](https://anapaiva16.github.io/MEU-ECOMMERCE/produto5.html)
+- 🔍 [Detalhes do Produto 6](https://anapaiva16.github.io/MEU-ECOMMERCE/produto6.html)
+- 🛍️ [Carrinho de Compras](https://anapaiva16.github.io/MEU-ECOMMERCE/carrinho.html)
+- 👤 [Cadastro e Checkout](https://anapaiva16.github.io/MEU-ECOMMERCE/cadastro.html)
 
 ---
 
