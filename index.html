@@ -117,12 +117,12 @@
                                  width="400" height="500" loading="lazy">
                         </figure>
                     </a>
-                    <figcaption class="product-info">
+                    <div class="product-info">
                         <h3 class="product-name">Nuit Velours Oud</h3>
                         <p class="product-desc">Eau de Parfum</p>
                         <span class="product-price">€ 310,00</span>
                         <a href="produto1.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
-                    </figcaption>
+                    </div>
                 </article>
 
                 <!-- Produto 2 -->
@@ -134,12 +134,12 @@
                              width="400" height="500" loading="lazy">
                     </figure>
                     </a>
-                    <figcaption class="product-info">
+                    <div class="product-info">
                         <h3 class="product-name">Éclat de Rose Impériale</h3>
                         <p class="product-desc">Extratos de Perfume</p>
                         <span class="product-price">€ 450,00</span>
                         <a href="produto2.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
-                    </figcaption>
+                    </div>
                 </article>
 
                 <!-- Produto 3 -->
@@ -151,12 +151,12 @@
                              width="400" height="500" loading="lazy">
                     </figure>
                     </a>
-                    <figcaption class="product-info">
+                    <div class="product-info">
                         <h3 class="product-name">Santal Absolu</h3>
                         <p class="product-desc">Eau de Parfum</p>
                         <span class="product-price">€ 285,00</span>
                         <a href="produto3.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
-                    </figcaption>
+                    </div>
                 </article>
 
                 <!-- Produto 4 -->
@@ -168,12 +168,12 @@
                              width="400" height="500" loading="lazy">
                     </figure>
                     </a>
-                    <figcaption class="product-info">
+                    <div class="product-info">
                         <h3 class="product-name">Bergamote Argentée</h3>
                         <p class="product-desc">Colônia de Luxo</p>
                         <span class="product-price">€ 195,00</span>
                         <a href="produto4.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
-                    </figcaption>
+                    </div>
                 </article>
 
                 <!-- Produto 5 -->
@@ -185,12 +185,12 @@
                              width="400" height="500" loading="lazy">
                     </figure>
                     </a>
-                    <figcaption class="product-info">
+                    <div class="product-info">
                         <h3 class="product-name">Cuir Sacré</h3>
                         <p class="product-desc">Perfume Sólido e em Spray</p>
                         <span class="product-price">€ 390,00</span>
                         <a href="produto5.html" class="btn-buy" style="display: block; text-decoration: none; text-align: center;" data-translate="btn-buy">Comprar</a>
-                    </figcaption>
+                    </div>
                 </article>
 
                 <!-- Produto 6 (Obrigatório: Status Esgotado) -->
@@ -203,16 +203,17 @@
                         <span class="badge-sold-out">ESGOTADO!</span>
                     </figure>
                     </a>
-                    <figcaption class="product-info">
+                    <div class="product-info">
                         <h3 class="product-name">Or Blanc Réserve 2024</h3>
                         <p class="product-desc">Edição Limitada</p>
                         <span class="product-price unavailable">Indisponível</span>
                         <button type="button" class="btn-notify">Avise-me</button>
-                    </figcaption>
+                    </div>
                 </article>
 
             </div>
         </section>
+    </main>
 
             <!-- 6. RODAPÉ INSTITUCIONAL DA LOJA -->
     <footer class="main-footer">
@@ -235,7 +236,6 @@
 
     </footer>
 
-            <!-- SCRIPT PARA DISPARAR ALERTA NO BOTÃO AVISE-ME (BLINDADO) -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Monitora os cliques de forma global na página
@@ -244,7 +244,7 @@
                 const botaoAviseMe = event.target.closest(".btn-notify") || event.target.closest("[data-translate='btn-indisponivel']");
                 
                 if (botaoAviseMe) {
-                    event.preventDefault(); // Impede a página de pular ou recarregar
+                    event.preventDefault();
 
                     // Tenta achar o nome do perfume subindo até o card do produto
                     const cardProduto = botaoAviseMe.closest(".product-card");
@@ -263,6 +263,6 @@
             });
         });
     </script>
-
+    
 </body>
 </html>
