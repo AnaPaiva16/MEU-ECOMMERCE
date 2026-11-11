@@ -30,4 +30,4 @@ Todas as páginas deste repositório foram inspecionadas e validadas com **Zero 
 | **`produto6.html`** | 🟢 100% Válido | [Verificar no W3C Nu Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fanapaiva16.github.io%2FMEU-ECOMMERCE%2Fproduto6.html) |
 | **`carrinho.html`** | 🟢 100% Válido | [Verificar no W3C Nu Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fanapaiva16.github.io%2FMEU-ECOMMERCE%2Fcarrinho.html) |
 | **`cadastro.html`** | 🟢 100% Válido | [Verificar no W3C Nu Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fanapaiva16.github.io%2FMEU-ECOMMERCE%2Fcadastro.html) |
-| **`style.css`** | 🟢 CSS3 Válido | [Verificar no W3C Jigsaw CSS](https://validator.w3.org/nu/?doc=https%3A%2F%2Fanapaiva16.github.io%2FMEU-ECOMMERCE%2F&profile=css3svg) |
+| **`style.css`** | 🟢 CSS3 Válido | [Verificar no W3C Jigsaw CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fanapaiva16.github.io%252FMEU-ECOMMERCE%252F%26profile%3Dcss3svg&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pt-BR) |
